@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "r1Hpe97TArh3Vs9QNM8Qgc33dyTHPxyBRO8bJMfWsk0e8h5cmFI18DYxFFN/g5e28GwdkIL6AqRFpY7fVeFSYQ==",
+  "success": true,
+  "projectFilePath": "D:\\CSharp\\MAUI\\SensorSimulatorWPF2\\SensorSimulatorWPF2\\SensorSimulatorWPF2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jakub\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jakub\\.nuget\\packages\\mongodb.bson\\2.21.0\\mongodb.bson.2.21.0.nupkg.sha512",
+    "C:\\Users\\Jakub\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Jakub\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Jakub\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

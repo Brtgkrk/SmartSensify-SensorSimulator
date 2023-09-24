@@ -1,0 +1,80 @@
+﻿<Window x:Class="SensorSimulatorWPF2.Views.EditSensorView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SensorSimulatorWPF2.Views"
+        mc:Ignorable="d"
+        Title="EditSensorView" Height="700
+        " Width="600"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Edit Sensor" HorizontalAlignment="Left" Margin="166,10,0,0" VerticalAlignment="Top" Height="26" Width="68"/>
+        <TextBox x:Name="SensorNameText" HorizontalAlignment="Left" Margin="140,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="18"/>
+        <Label Content="Sensor name" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="125" Height="26"/>
+        <TextBox x:Name="SensorIdText" HorizontalAlignment="Left" Margin="140,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="18"/>
+        <Label Content="Sensor id" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="125" Height="26"/>
+        <TextBox x:Name="SensorSecretKeyText" HorizontalAlignment="Left" Margin="140,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="18"/>
+        <Label Content="Sensor secret key" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="125" Height="26"/>
+        <TextBox x:Name="SensorChangeSpeedText" HorizontalAlignment="Left" Margin="189,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="18"/>
+        <Label Content="Time between data generation" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="183" Height="26"/>
+
+        <Label Content="Add new data type" HorizontalAlignment="Left" Margin="378,10,0,0" VerticalAlignment="Top" Height="26" Width="114"/>
+        <TextBox x:Name="TypeNameText" HorizontalAlignment="Left" Margin="445,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="18"/>
+        <Label Content="Type name" HorizontalAlignment="Left" Margin="315,37,0,0" VerticalAlignment="Top" Width="125" Height="26"/>
+        <TextBox x:Name="TypeUnitText" HorizontalAlignment="Left" Margin="445,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="18"/>
+        <Label Content="Type unit" HorizontalAlignment="Left" Margin="315,68,0,0" VerticalAlignment="Top" Width="125" Height="26"/>
+        <TextBox x:Name="ValueMinText" HorizontalAlignment="Left" Margin="445,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="18"/>
+        <Label Content="Value min" HorizontalAlignment="Left" Margin="315,99,0,0" VerticalAlignment="Top" Width="125" Height="26"/>
+        <TextBox x:Name="ValueMaxText" HorizontalAlignment="Left" Margin="445,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="18"/>
+        <Label Content="Value max" HorizontalAlignment="Left" Margin="315,130,0,0" VerticalAlignment="Top" Width="125" Height="26"/>
+        <Button Content="Add new type" HorizontalAlignment="Left" Margin="445,159,0,0" VerticalAlignment="Top" Width="119" Click="AddNewTypeClick"/>
+        <Label x:Name="WarningTypeText" Content="Complete entire type!" HorizontalAlignment="Left" Margin="300,157,0,0" VerticalAlignment="Top" Width="134" FontWeight="Bold" Foreground="Red" Visibility="Hidden"/>
+
+        <Label x:Name="WarningText" Content="Complete entire sensor specification!" HorizontalAlignment="Left" Margin="27,157,0,0" VerticalAlignment="Top" Width="224" FontWeight="Bold" Foreground="Red" Visibility="Hidden"/>
+        <Label Content="Data Types" HorizontalAlignment="Center" Margin="0,191,0,0" VerticalAlignment="Top"/>
+
+        <Button Content="Save" HorizontalAlignment="Center" Margin="0,633,0,0" VerticalAlignment="Top" Width="150" Height="25" Click="SaveSensorClick"/>
+        <ListBox x:Name="listBoxSensorTypes" Margin="0,222,0,77" BorderThickness="0,0,0,1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold">
+                        <Run Text="Type name: " />
+                        <Run Text="{Binding Name}" />
+                            </TextBlock>
+                            <TextBlock>
+                        <Run Text="Unit: " />
+                        <Run Text="{Binding Unit}" />
+                            </TextBlock>
+                            <TextBlock>
+                        <Run Text="Value min: " />
+                        <Run Text="{Binding ValueMin}" />
+                            </TextBlock>
+                            <TextBlock>
+                        <Run Text="Value max: " />
+                        <Run Text="{Binding ValueMax}" />
+                            </TextBlock>
+                        </StackPanel>
+                        <CheckBox Margin="550,0,0,0" IsChecked="{Binding IsSelected}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+
+
+
+        <Rectangle HorizontalAlignment="Left" Height="186" Stroke="#FF7E7E7E" VerticalAlignment="Top" Width="300" Margin="-5,-5,0,0" StrokeThickness="0.5"/>
+
+
+
+
+    </Grid>
+</Window>
